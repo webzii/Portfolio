@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Awad — Full-Stack Developer & STEM Leader</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        palette: {
+                            primary: '#7D80C7',
+                            lightBlue: '#BED1FC',
+                            ice: '#F1F8FF',
+                            base: '#FAFAFA',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FAFAFA; color: #1e293b; }
+        .glass-card { background: rgba(255, 255, 255, 0.85); backdrop-filter: blur(12px); border: 1px solid rgba(125, 128, 199, 0.2); }
+        .glass-nav { background: rgba(250, 250, 250, 0.9); backdrop-filter: blur(10px); }
+    </style>
+</head>
+<body class="antialiased selection:bg-[#7D80C7] selection:text-white">
+
+    <!-- Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3">
+                <div>
+                    <span class="font-bold text-lg tracking-tight text-slate-900 block">Ahmed Awad</span>
+                    <span class="text-xs text-[#7D80C7] font-semibold tracking-wide uppercase">Full-Stack Developer</span>
+                </div>
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-[#7D80C7] transition">About</a>
+                <a href="#experience" class="hover:text-[#7D80C7] transition">Experience</a>
+                <a href="#projects" class="hover:text-[#7D80C7] transition">Projects</a>
+                <a href="#publications" class="hover:text-[#7D80C7] transition">Publications</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button onclick="openCvModal()" class="hidden sm:inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold text-[#7D80C7] bg-[#BED1FC]/30 border border-[#BED1FC] hover:bg-[#BED1FC]/50 transition shadow-sm">
+                    <i class="fa-solid fa-file-lines"></i> CV Summary
+                </button>
+                <a href="#contact" class="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-[#7D80C7] hover:bg-[#6c6fb3] transition shadow-lg shadow-[#7D80C7]/30">
+                    Let's Work
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 md:pt-44 md:pb-32 px-6 bg-gradient-to-b from-[#F1F8FF] to-[#FAFAFA] relative overflow-hidden">
+        <div class="absolute top-20 right-10 w-72 h-72 bg-[#BED1FC]/40 rounded-full blur-3xl pointer-events-none"></div>
+        <div class="absolute bottom-10 left-10 w-96 h-96 bg-[#7D80C7]/10 rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12 items-center relative z-10">
+            <div class="md:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#BED1FC]/40 border border-[#BED1FC] text-xs font-bold text-[#7D80C7]">
+                    <span class="w-2 h-2 rounded-full bg-[#7D80C7] animate-pulse"></span> Available for Web Dev & Tech Gigs (48-72h turnaround)
+                </div>
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-slate-900 leading-tight">
+                    Engineering <span class="text-[#7D80C7]">Human-Centric</span> Digital Solutions.
+                </h1>
+                <p class="text-lg text-slate-600 max-w-2xl leading-relaxed">
+                    Full-Stack Developer, Chief of Web Dev at Ather Charity, and STEM leader building scalable platforms and AI-driven systems.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="px-7 py-3.5 rounded-xl font-semibold text-white bg-[#7D80C7] hover:bg-[#6c6fb3] transition shadow-lg shadow-[#7D80C7]/30 flex items-center gap-2">
+                        <span>Explore Projects</span>
+                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                    </a>
+                    <button onclick="openCvModal()" class="px-7 py-3.5 rounded-xl font-semibold text-slate-700 bg-white border border-gray-300 hover:bg-gray-50 transition shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-id-card text-[#7D80C7]"></i>
+                        <span>CV Summary</span>
+                    </button>
+                </div>
+                <div class="pt-6 flex items-center gap-6 text-sm text-slate-500">
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-[#7D80C7]"></i> Cairo, Egypt</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-envelope text-[#7D80C7]"></i> ahmedwebzii@gmail.com</div>
+                    <div class="flex items-center gap-2"><i class="fa-solid fa-phone text-[#7D80C7]"></i> +20 1123238814</div>
+                </div>
+            </div>
+
+            <!-- Profile Card -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="w-full max-w-sm glass-card rounded-3xl p-6 shadow-xl relative border border-[#BED1FC]">
+                    <div class="absolute -top-3 -right-3 bg-[#7D80C7] text-white text-xs font-bold px-3 py-1 rounded-full shadow">
+                        STEM School Graduate
+                    </div>
+                    <div class="w-32 h-32 mx-auto rounded-2xl bg-gradient-to-tr from-[#7D80C7] to-[#BED1FC] p-1 mb-6 shadow-inner">
+                        <div class="w-full h-full bg-slate-900 rounded-xl flex items-center justify-center text-white text-4xl font-extrabold">
+                            <img src="picsuit.jpeg" class="w-full h-full bg-slate-900 rounded-xl flex items-center justify-center text-white text-4xl font-extrabold">
+                        </div>
+                    </div>
+                    <h3 class="text-center font-bold text-xl text-slate-900">Ahmed Raafat Awad</h3>
+                    <p class="text-center text-xs font-semibold text-[#7D80C7] mt-1 uppercase tracking-wider">Obour STEM School (Class of 2026)</p>
+                    
+                    <div class="mt-6 pt-6 border-t border-gray-100 grid grid-cols-2 gap-4 text-center">
+                        <div class="bg-[#F1F8FF] p-3 rounded-xl border border-[#BED1FC]/50">
+                            <span class="block text-2xl font-extrabold text-[#7D80C7]">3.68</span>
+                            <span class="text-xs text-slate-500 font-medium">GPA (A- Grade)</span>
+                        </div>
+                        <div class="bg-[#F1F8FF] p-3 rounded-xl border border-[#BED1FC]/50">
+                            <span class="block text-2xl font-extrabold text-[#7D80C7]">50+</span>
+                            <span class="text-xs text-slate-500 font-medium">Students Mentored</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Expertise Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">About Me & Core Competencies</h2>
+                <p class="text-slate-600 mt-3">Combining technical rigor in web technologies with cognitive insights for high-impact social solutions.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-[#FAFAFA] p-8 rounded-3xl border border-gray-200 hover:border-[#7D80C7] transition shadow-sm group">
+                    <div class="w-14 h-14 rounded-2xl bg-[#BED1FC]/50 text-[#7D80C7] flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-[#7D80C7] group-hover:text-white transition">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Full-Stack Development</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Proficient in Node.js, TypeScript, HTML5, CSS3, Tailwind, Git, and OOP architectures. Experienced in building responsive web applications and custom backends.
+                    </p>
+                </div>
+                <!-- Card 2 -->
+                <div class="bg-[#FAFAFA] p-8 rounded-3xl border border-gray-200 hover:border-[#7D80C7] transition shadow-sm group">
+                    <div class="w-14 h-14 rounded-2xl bg-[#BED1FC]/50 text-[#7D80C7] flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-[#7D80C7] group-hover:text-white transition">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Leadership & Mentoring</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Chief of Web Development at Ather Charity. Led a 14-day intensive CS bootcamp for 50+ students, directing curriculum design and technical mentorship.
+                    </p>
+                </div>
+                <!-- Card 3 -->
+                <div class="bg-[#FAFAFA] p-8 rounded-3xl border border-gray-200 hover:border-[#7D80C7] transition shadow-sm group">
+                    <div class="w-14 h-14 rounded-2xl bg-[#BED1FC]/50 text-[#7D80C7] flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-[#7D80C7] group-hover:text-white transition">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">AI & Systems Research</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        Engineered computer vision traffic preemption systems and wastewater purification membranes, blending empirical science with software engineering.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Leadership Section -->
+    <section id="experience" class="py-20 px-6 bg-[#F1F8FF]/50 border-y border-gray-200">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Work Experience & Leadership</h2>
+                <p class="text-slate-600 mt-2">Roles where I spearheaded development and community leadership.</p>
+            </div>
+
+            <div class="space-y-8">
+                <!-- Item 1 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm relative pl-8 md:pl-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-2 bg-[#7D80C7] rounded-l-3xl"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-[#7D80C7] uppercase tracking-wider">Ather Charity Initiative</span>
+                            <h3 class="text-xl font-extrabold text-slate-900">Chief of Web Development</h3>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#BED1FC]/30 text-slate-700 mt-2 md:mt-0 w-fit">June 2025 – Present</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Leading full-stack development and UI design for social impact platforms. Directing version 2.0 architectural overhaul, continuous site maintenance, and junior developer code reviews.
+                    </p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm relative pl-8 md:pl-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-2 bg-[#BED1FC] rounded-l-3xl"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-[#7D80C7] uppercase tracking-wider">Obour STEM School</span>
+                            <h3 class="text-xl font-extrabold text-slate-900">Web Development Lead & Bootcamp Instructor</h3>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#BED1FC]/30 text-slate-700 mt-2 md:mt-0 w-fit">Oct 2024 – June 2025</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Orchestrated a 14-day intensive boot camp for 50+ students. Designed project-based full-stack curriculums, bridging theory with practical UI/UX implementation and Node.js.
+                    </p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm relative pl-8 md:pl-10">
+                    <div class="absolute left-0 top-0 bottom-0 w-2 bg-[#7D80C7] rounded-l-3xl"></div>
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-bold text-[#7D80C7] uppercase tracking-wider">Mission Green Global</span>
+                            <h3 class="text-xl font-extrabold text-slate-900">Content Writing Lead (Cairo Chapter)</h3>
+                        </div>
+                        <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#BED1FC]/30 text-slate-700 mt-2 md:mt-0 w-fit">Dec 2024 – Present</span>
+                    </div>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                        Producing technical and environmental content to drive community engagement and awareness across regional chapters.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-6 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Featured Projects</h2>
+                <p class="text-slate-600 mt-2">Real solutions built for non-profits, urban infrastructure, and environmental sustainability.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-[#FAFAFA] rounded-3xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gradient-to-tr from-[#7D80C7] to-[#BED1FC] p-6 flex flex-col justify-end text-white">
+                        <span class="text-xs font-bold uppercase tracking-wider bg-white/20 w-fit px-2.5 py-1 rounded-md mb-2">Web Platform</span>
+                        <h3 class="text-xl font-bold">Ather Initiative Website</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Official web platform for Ather charity promoting volunteerism. Features mission showcases, impact stats, and online branch application systems.
+                        </p>
+                        <a href="https://www.atherinitiative.org" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-[#7D80C7] hover:underline">
+                            <span>Visit Platform</span>
+                            <i class="fa-solid fa-external-link text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-[#FAFAFA] rounded-3xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gradient-to-tr from-slate-900 to-[#7D80C7] p-6 flex flex-col justify-end text-white">
+                        <span class="text-xs font-bold uppercase tracking-wider bg-white/20 w-fit px-2.5 py-1 rounded-md mb-2">AI & Computer Vision</span>
+                        <h3 class="text-xl font-bold">Traffic Flow Preemption</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Engineered a computer vision and adaptive AI solution to resolve urban traffic congestion and emergency vehicle delays via density-based signal optimization.
+                        </p>
+                        <span class="text-xs font-semibold text-slate-500 bg-gray-200 px-3 py-1 rounded-md w-fit">Research & Implementation</span>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-[#FAFAFA] rounded-3xl border border-gray-200 overflow-hidden flex flex-col hover:shadow-lg transition">
+                    <div class="h-48 bg-gradient-to-tr from-[#7D80C7] to-slate-800 p-6 flex flex-col justify-end text-white">
+                        <span class="text-xs font-bold uppercase tracking-wider bg-white/20 w-fit px-2.5 py-1 rounded-md mb-2">Materials & Science</span>
+                        <h3 class="text-xl font-bold">TriClear Cycle Wastewater</h3>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                            Sustainable 3-stage agricultural purification using date seed adsorption, coagulation, and ceramic membrane filtration achieving a 62% TDS and 93% turbidity reduction.
+                        </p>
+                        <span class="text-xs font-semibold text-slate-500 bg-gray-200 px-3 py-1 rounded-md w-fit">Eco-Purification System</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="py-20 px-6 bg-[#F1F8FF]/40 border-t border-gray-200">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Publications & Essays</h2>
+                <p class="text-slate-600 mt-2">Analytical articles published in the Obour STEM School Magazine (2025).</p>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900">Long live the Arab Republic of Egypt?</h3>
+                    <p class="text-slate-600 text-sm mt-2">A deep-dive analytical piece contrasting ancient lineage with modern Arabization, framing Egypt as a unique civilizational synthesis.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900">The Lincoln-Douglas Debates: A Turning Point in American History</h3>
+                    <p class="text-slate-600 text-sm mt-2">Examines the philosophical clash between popular sovereignty and moral conviction in 19th-century political discourse.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-lg text-slate-900">The Debater: Abraham Lincoln and the Power of Words</h3>
+                    <p class="text-slate-600 text-sm mt-2">Analyzes how moral clarity, logical precision, and humanistic appeal served as strategic tools for political change.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Fast Hire CTA -->
+    <section id="contact" class="py-20 px-6 bg-slate-900 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#7D80C7]/20 to-transparent pointer-events-none"></div>
+        <div class="max-w-4xl mx-auto text-center relative z-10">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-4">Ready to Start Working Together?</h2>
+            <p class="text-slate-300 max-w-xl mx-auto mb-8 text-sm md:text-base">
+                Whether you need a full-stack web developer for your startup, quick landing pages, or technical outreach assistance, let's get it done.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="mailto:ahmedwebzii@gmail.com" class="px-8 py-3.5 rounded-xl font-bold bg-[#7D80C7] hover:bg-[#6c6fb3] transition shadow-lg text-white">
+                    <i class="fa-solid fa-envelope mr-2"></i> Email Me Directly
+                </a>
+                <a href="https://www.linkedin.com/in/ahmed-raafat-awad" target="_blank" class="px-8 py-3.5 rounded-xl font-bold bg-white/10 border border-white/20 hover:bg-white/20 transition text-white">
+                    <i class="fa-brands fa-linkedin mr-2"></i> Connect on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-slate-950 text-slate-500 text-xs text-center border-t border-slate-800">
+        <p>&copy; 2026 Ahmed Awad.</p>
+    </footer>
+
+    <!-- Interactive CV Modal -->
+    <div id="cvModal" class="fixed inset-0 z-50 hidden bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-white w-full max-w-2xl rounded-3xl p-6 md:p-8 shadow-2xl relative max-h-[90vh] overflow-y-auto">
+            <button onclick="closeCvModal()" class="absolute top-6 right-6 text-slate-400 hover:text-slate-900 text-xl font-bold">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="flex items-center gap-4 mb-6">
+                <div class="w-14 h-14 rounded-2xl bg-[#7D80C7] text-white flex items-center justify-center font-bold text-2xl">AA</div>
+                <div>
+                    <h3 class="text-2xl font-extrabold text-slate-900">Ahmed Raafat Awad</h3>
+                    <p class="text-xs font-bold text-[#7D80C7] uppercase">Full-Stack Developer & STEM Student</p>
+                </div>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600">
+                <div>
+                    <strong class="text-slate-900 block mb-1">Contact & Info</strong>
+                    <p>Phone: +20 1123238814 | Email: ahmedwebzii@gmail.com</p>
+                    <p>Location: Ahmed Zidan St 6, 11761, Cairo, Egypt</p>
+                </div>
+                <div>
+                    <strong class="text-slate-900 block mb-1">Education</strong>
+                    <p>Obour STEM School (2023–2026) — GPA: 3.68 (A-)</p>
+                </div>
+                <div>
+                    <strong class="text-slate-900 block mb-1">Language Skills</strong>
+                    <p>Arabic (Mother tongue), English (C1 Listening/Reading, B2 Spoken/Writing), French (A1)</p>
+                </div>
+                <div>
+                    <strong class="text-slate-900 block mb-1">Technical Stack</strong>
+                    <p>Node.js, TypeScript, HTML5, CSS3, Tailwind, Git, UI/UX Design, Microsoft Office</p>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-200 flex justify-end">
+                <button onclick="closeCvModal()" class="px-6 py-2.5 rounded-xl bg-slate-900 text-white font-semibold text-sm hover:bg-slate-800">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openCvModal() {
+            document.getElementById('cvModal').classList.remove('hidden');
+        }
+        function closeCvModal() {
+            document.getElementById('cvModal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
